@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="mainBorderPane"
+            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            fx:controller="com.parulenterprise.ui.Controller">
+    <top>
+        <MenuBar>
+            <Menu text="Add..">
+                <items>
+                    <MenuItem text="Add new Product"/>
+                    <MenuItem text="Add new Item"/>
+                    <MenuItem text="Add Stock"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <left>
+        <TableView fx:id="productTableView" prefHeight="Infinity" prefWidth="250">
+            <columns>
+                <TableColumn prefWidth="165" text="Product">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                    <TableColumn prefWidth="75" text="Stock" style="-fx-alignment: CENTER-RIGHT;">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="stock"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <BorderPane.margin>
+                <Insets left="6.0" right="16.0"/>
+            </BorderPane.margin>
+        </TableView>
+    </left>
+
+    <center>
+        <StackPane >
+            <ScrollPane fx:id="centerPaneScrollPane" >
+                <VBox fx:id="centerPaneVBox" >
+
+                </VBox>
+            </ScrollPane>
+
+            <Button fx:id="goToTopBtn" StackPane.alignment="TOP_RIGHT" style="-fx-background-color: transparent">
+                <StackPane.margin>
+                    <Insets bottom="16" left="16" right="16" top="16" />
+                </StackPane.margin>
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="file:icons/baseline_arrow_circle_up_black_18dp.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="goToBottomBtn" StackPane.alignment="BOTTOM_RIGHT"  style="-fx-background-color: transparent">
+                <StackPane.margin>
+                    <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                </StackPane.margin>
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="file:icons/baseline_arrow_circle_down_black_18dp.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+
+        </StackPane>
+    </center>
+
+    <bottom>
+        <HBox fx:id="bottomHBox" spacing="8">
+            <padding>
+                <Insets left="6" right="6" top="6" bottom="6"/>
+            </padding>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <ProgressBar fx:id="saveProgressBar" />
+            <Label fx:id="saveProgressMessage" />
+            <Button onAction="#saveOnFile" text="See changes"/>
+        </HBox>
+    </bottom>
+</BorderPane>

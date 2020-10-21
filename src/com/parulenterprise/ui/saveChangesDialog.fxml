@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<DialogPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.parulenterprise.ui.SaveChangesDialog">
+
+    <headerText>
+        Save changes? Click apply to save changes.
+    </headerText>
+
+    <content>
+        <BorderPane fx:id="saveBorderPane">
+            <top>
+                <HBox spacing="10">
+                    <Label  text="Name" />
+                    <TextField fx:id="inputName"/>
+
+                    <padding>
+                        <Insets bottom="10"/>
+                    </padding>
+                </HBox>
+            </top>
+
+            <center>
+                <ScrollPane fx:id="saveCenterScrollPane" >
+                    <VBox fx:id="saveDataVBox" prefWidth="${saveCenterScrollPane.prefWidth}" />
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </content>
+
+</DialogPane>

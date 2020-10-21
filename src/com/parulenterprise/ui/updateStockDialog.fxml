@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:id="addNewStockDialogPane"
+            xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.parulenterprise.ui.UpdateStockDialog">
+    <headerText>
+            Update stock
+    </headerText>
+    <content>
+        <GridPane fx:id="updateStockGridPane" hgap="16" vgap="16">
+            <Label text="Product: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="productTextField" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+            <Label text="Name(Item): " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="itemTextField" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <Label text="Stock: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="stockValueTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Total:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label fx:id="totalStockLabel" prefWidth="50" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            <Label text="Date: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <DatePicker fx:id="updateStockDate" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Hyperlink fx:id="addNoteToUpdateStock" text="Add note..." GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            <padding>
+                <Insets left="16" right="16" top="16" />
+            </padding>
+
+        </GridPane>
+    </content>
+</DialogPane>

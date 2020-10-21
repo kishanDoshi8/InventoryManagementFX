@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.parulenterprise.ui.AddNewItemDialog">
+
+    <headerText>
+        Add new Item
+    </headerText>
+
+    <content>
+        <GridPane fx:id="addNewItemGridPane"  hgap="16" vgap="16">
+            <Label text="ID: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="addItemId"  GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+            <Label text="Name(Item): " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="addItemName" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <Label text="Pages: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="addItemPage"  GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+            <Label text="Package: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="addItemPackage" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+            <Label text="Price: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="addItemPrice" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+            <Label text="Stock: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="addItemStock"  GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Date: " GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            <DatePicker fx:id="addItemDate" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+            <Hyperlink fx:id="addNoteToAddItem" text="Add note..." GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+            <padding>
+                <Insets left="16" right="30" top="16" />
+            </padding>
+        </GridPane>
+    </content>
+
+</DialogPane>
