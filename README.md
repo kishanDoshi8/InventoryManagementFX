@@ -13,3 +13,7 @@ This is a simple Inventory Management desktop application created using JavaFX f
 #### Note:
 - Product is referred to the type of product (As showed in the left hand side table)
 - Item is referred to the sub product or the item itself 
+- ID is unique ID for each item
+- UUID is uinque ID given to each saved data (only if saved)
+- Package is referred to package or bundle size of the final product
+- Stock of an item should be number package of the same item in the inventory 
